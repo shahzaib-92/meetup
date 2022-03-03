@@ -2,17 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import AllMeetUps from "./pages/AllMeetUps";
 import NewMeetup from "./pages/NewMeetup";
 import Favourites from "./pages/Favourites";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 export default function App() {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
       <Routes>
         <Route path="/" element={<AllMeetUps />} />
         <Route path="/new-meetup" element={<NewMeetup />} />
         <Route path="/favorites" element={<Favourites />} />
       </Routes>
-    </div>
+    </Layout>
   );
 }
